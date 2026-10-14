@@ -1,0 +1,15 @@
+.hero {
+	padding: 4rem 0;
+}
+
+.title {
+	font-size: var(--font-size-display);
+	line-height: var(--line-height-tight);
+	margin: 0;
+}
+
+.subtitle {
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-tight);
+	margin: 0;
+}

@@ -1,0 +1,16 @@
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>
+		{{ site.title }} — {% if page.title %}{{ page.title }}{% else %}{{
+		site.description }}{% endif %}
+	</title>
+
+	<meta
+		name="description"
+		content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+	/>
+
+	<link rel="stylesheet" href="/styles/devproof.css" />
+</head>

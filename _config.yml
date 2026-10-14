@@ -1,0 +1,6 @@
+title: DevProof
+description: Boostez votre qualité numérique
+incremental: true
+include:
+  - styles/_colors.css
+  - styles/_typography.css
