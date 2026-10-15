@@ -1,45 +1,58 @@
 .card {
-	padding: 0.75rem;
-	border-radius: 1.25rem;
+	--card-spacing: 0.75rem;
+	--card-radius: 1.5rem;
+	padding: var(--card-spacing);
+	border-radius: var(--card-radius);
 	background-color: var(--color-surface);
 	color: var(--color-text);
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
+	gap: var(--card-spacing);
+	box-shadow: 0.5px 0.5px 1px var(--color-surface);
 }
 
 .card-header {
+	--card-header-spacing: 0rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
 	color: var(--color-text);
 	font-size: var(--text-size-base);
-	display: flex;
-	gap: 0.75rem;
-	align-items: center;
+	vertical-align: middle;
+	line-height: 1;
 
+	&:not(.elevated):not(:last-child) {
+		padding-bottom: var(--card-spacing);
+		border-bottom: 1px solid var(--color-surface-alternate);
+	}
 	&.elevated {
-		border-radius: 0.5rem;
+		--card-header-spacing: 0.5rem;
+		border-radius: calc(var(--card-radius) - var(--card-spacing));
+		padding: var(--card-header-spacing);
 		background-color: var(--color-surface-alternate);
+		box-shadow: 0.5px 0.5px 1px var(--color-surface-alternate);
 
 		.icon {
+			border-radius: calc(
+				var(--card-radius) - var(--card-spacing) - var(--card-header-spacing)
+			);
 			color: var(--color-surface-alternate);
 		}
 	}
-	&:not(.elevated):not(:last-child) {
-		padding-bottom: 1rem;
-		border-bottom: 1px solid var(--color-surface-alternate);
-	}
 
 	.icon {
-		width: 2rem;
-		height: 2rem;
-		padding: 0.5rem;
-		border-radius: 0.5rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		padding: 0.25rem;
+		border-radius: calc(
+			var(--card-radius) - (var(--card-spacing) + var(--card-header-spacing))
+		);
 		background-color: var(--color-accent);
 		color: var(--color-text);
 		text-align: center;
 	}
 
 	.title {
-		padding: 0.5rem 0;
 		font-size: var(--text-size-base);
 	}
 }
@@ -55,5 +68,9 @@
 .card-content {
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
+	gap: var(--card-spacing);
+
+	& > * {
+		margin: 0;
+	}
 }

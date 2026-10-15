@@ -30,6 +30,7 @@
 }
 
 .button-bar {
+	--button-bar-spacing: var(--card-spacing, 0.5rem);
 	display: flex;
-	gap: 0.5em;
+	gap: var(--button-bar-spacing);
 }
