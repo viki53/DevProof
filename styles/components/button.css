@@ -1,7 +1,7 @@
 .button {
 	display: inline-flex;
-	padding: 0.5em;
-	border-radius: 0.5rem;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
 	background-color: var(--color-surface-alternate);
 	color: var(--color-text);
 	text-decoration: none;
@@ -9,15 +9,25 @@
 
 	&.action {
 		background-color: var(--color-action);
-		color: var(--color-text);
+		color: var(--color-surface);
 	}
 	&.accent {
 		background-color: var(--color-accent);
-		color: var(--color-background);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.button {
+		&.action {
+			color: var(--color-text);
+		}
+		&.accent {
+			color: var(--color-background);
+		}
 	}
 }
 
 .button-bar {
 	display: flex;
-	gap: 0.5rem;
+	gap: 0.5em;
 }
