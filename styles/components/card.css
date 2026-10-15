@@ -74,3 +74,16 @@
 		margin: 0;
 	}
 }
+
+.card-footer {
+	display: flex;
+	flex-direction: row;
+	gap: var(--card-spacing);
+
+	&.button-bar {
+		--button-bar-spacing: var(--card-spacing);
+	}
+
+	.button {
+	}
+}
