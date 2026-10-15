@@ -34,13 +34,21 @@
 		padding: 0.5rem;
 		border-radius: 0.5rem;
 		background-color: var(--color-accent);
-		color: var(--color-surface);
+		color: var(--color-text);
 		text-align: center;
 	}
 
 	.title {
 		padding: 0.5rem 0;
 		font-size: var(--text-size-base);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.card-header {
+		.icon {
+			color: var(--color-surface);
+		}
 	}
 }
 
