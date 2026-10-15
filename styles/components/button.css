@@ -1,9 +1,11 @@
 .button {
 	display: inline-flex;
 	padding: 0.5em 1em;
+	border: none;
 	border-radius: 0.5em;
 	background-color: var(--color-surface-alternate);
 	color: var(--color-text);
+	font: inherit;
 	text-decoration: none;
 	font-weight: 600;
 
